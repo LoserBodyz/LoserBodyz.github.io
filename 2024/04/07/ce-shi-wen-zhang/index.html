@@ -380,16 +380,39 @@
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-04-07
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    0
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
         
 
         
@@ -422,7 +445,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://LoserBodyz.github.io/2024/04/07/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/">http://LoserBodyz.github.io/2024/04/07/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</a>
+                    <a href="http://LoserBodyz.github.io/2024/04/07/ce-shi-wen-zhang/">http://LoserBodyz.github.io/2024/04/07/ce-shi-wen-zhang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,7 +564,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2024/04/07/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/">
+                <a href="/2024/04/07/ce-shi-wen-zhang/">
                     <div class="card-image">
                         
                         
@@ -579,7 +602,7 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/07/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/">
+                <a href="/2024/04/07/ce-shi-wen-zhang/">
                     <div class="card-image">
                         
                         
@@ -621,6 +644,9 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->
@@ -789,13 +815,18 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2024</span>
+                <span id="year">2024</span>
             
             <a href="/about" target="_blank">John Doe</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">0</span>
             
             
             
@@ -818,6 +849,11 @@
             <!-- 运行天数提醒. -->
             
             <br>
+            
+                <span id="icp"><img src="/medias/icp.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="/%3Ca%20href=%22https:/beian.miit.gov.cn/%22%20target=%22_blank%22%3E%E9%BB%91ICP%E5%A4%872024017316%E5%8F%B7%3C/a%3E" target="_blank">黑ICP备2024017316号</a>
+            </span>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
@@ -1003,6 +1039,17 @@ $(function () {
 
     
 
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://LoserBodyz.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
     
     
     
