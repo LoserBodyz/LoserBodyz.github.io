@@ -4,13 +4,23 @@
   
     
     <entry>
-      <title>测试文章</title>
-      <link href="/2024/04/07/ce-shi-wen-zhang/"/>
-      <url>/2024/04/07/ce-shi-wen-zhang/</url>
+      <title>游戏设计学习记录</title>
+      <link href="/2024/04/16/you-xi-she-ji/"/>
+      <url>/2024/04/16/you-xi-she-ji/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>[TOC]</p><h2 id="24-4-17来自游戏设计与原型开发"><a href="#24-4-17来自游戏设计与原型开发" class="headerlink" title="24&#x2F;4&#x2F;17来自游戏设计与原型开发"></a>24&#x2F;4&#x2F;17来自游戏设计与原型开发</h2><h4 id="Bartok：游戏练习"><a href="#Bartok：游戏练习" class="headerlink" title="Bartok：游戏练习"></a>Bartok：游戏练习</h4><p>Bartok是一种类似Uno的桌游<em>（PH：我爱Uno）</em></p><ol><li>准备一副去掉了大小王的扑克牌，洗混后向每个玩家发7张牌，剩下的牌面朝下作抽牌堆，将顶部的牌抽出一张牌面朝上作弃牌堆。</li><li>顺时针进行游戏，如果可以出牌必须出牌，如果不能出牌则必须抽一张牌</li><li>出牌条件如下:<ol><li>花色与弃牌堆顶部一致</li><li>数字与弃牌堆顶部一致</li></ol></li><li>出完手牌获胜</li></ol><p><em>（PH：这不纯Uno基础版）</em></p><p><strong>重点在于</strong>试玩后分析游戏体验</p><ol><li>游戏难度对于目标受众是否合适</li><li>游戏结果靠运气or策略？随机性的占比是否恰当</li><li>当一方占上风是否导致直接锁定胜局，难以翻盘</li><li>玩家的乐趣是否只在自己的回合内，各玩家的回合操作之间有无影响<em>（PH：大哥别卡我牌行吗）</em></li></ol><p>当我们收获了不同的游戏体验后就改针对性修改游戏了，所以游戏设计是一个<strong>增加，测试，分析，修改</strong>的过程多次重复直到设计师满意的过程。</p><p>在游戏设计与原型开发中提出了几个对Bartok规则的修改试玩的例子，例如如果一名玩家打出数字2，下一位玩家必须抽两张牌并跳过出牌。Uno玩家应该感到很熟悉，有一说一迭代设计真特么伟大。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> 游戏开发 </tag>
+            
+            <tag> 游戏设计 </tag>
+            
+        </tags>
       
     </entry>
     
