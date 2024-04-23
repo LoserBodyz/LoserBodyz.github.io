@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C#中的控制台, 懒惰的垃圾站">
-    <meta name="description" content="控制台的输入输出123456在控制台输出内容Console.WriteLine(&amp;quot;&amp;quot;)；//自带换行Console.Write(&amp;quot;&amp;quot;);//不带换行string str = Console.ReadL">
+    <meta name="keywords" content="C#方法,一些查缺补漏, 懒惰的垃圾站">
+    <meta name="description" content="控制台的输入输出在控制台输出内容
+12Console.WriteLine(&amp;quot;&amp;quot;)；//自带换行Console.Write(&amp;quot;&amp;quot;);//不带换行
+
+输入
+123string str = Console.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C#中的控制台 | 懒惰的垃圾站</title>
+    <title>C#方法,一些查缺补漏 | 懒惰的垃圾站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -225,12 +229,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C#中的控制台</h1>
+                    <h1 class="description center-align post-title">C#方法,一些查缺补漏</h1>
                 </div>
             </div>
         </div>
@@ -266,10 +270,6 @@
                                 <span class="chip bg-color">C#</span>
                             </a>
                         
-                            <a href="/tags/Unity/">
-                                <span class="chip bg-color">Unity</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -296,7 +296,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    204
+                    255
                 </div>
                 
 
@@ -326,9 +326,27 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="控制台的输入输出"><a href="#控制台的输入输出" class="headerlink" title="控制台的输入输出"></a>控制台的输入输出</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在控制台输出内容</span><br><span class="line">Console.WriteLine(<span class="string">&quot;&quot;</span>)；<span class="comment">//自带换行</span></span><br><span class="line">Console.Write(<span class="string">&quot;&quot;</span>);<span class="comment">//不带换行</span></span><br><span class="line"><span class="built_in">string</span> str = Console.ReadLine();<span class="comment">//输入字符串</span></span><br><span class="line">Char c = Console.ReadKey().KeyChar;<span class="comment">//输入字符</span></span><br><span class="line">	Char c = Console.ReadKey(ture).KeyChar;<span class="comment">//只检测输入的字符，不显示在控制台（依然会存到c中，只是不打印</span></span><br></pre></td></tr></table></figure>
+                <h4 id="控制台的输入输出"><a href="#控制台的输入输出" class="headerlink" title="控制台的输入输出"></a>控制台的输入输出</h4><p>在控制台输出内容</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;&quot;</span>)；<span class="comment">//自带换行</span></span><br><span class="line">Console.Write(<span class="string">&quot;&quot;</span>);<span class="comment">//不带换行</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="控制台方法"><a href="#控制台方法" class="headerlink" title="控制台方法"></a>控制台方法</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">清空控制台</span><br><span class="line">Console.Clear();</span><br><span class="line">设置控制台窗口大小包含窗口大小，缓冲区大小(缓冲区可以比窗口大，但不能小于窗口)</span><br><span class="line">Console.SetWindowSize(x,y);<span class="comment">//窗口大小</span></span><br><span class="line">Console.SetBufferSize(x,)y;<span class="comment">//缓冲区大小</span></span><br><span class="line">设置光标位置，和C++绘图一样默认原点为控制台左上角（<span class="number">0</span>，<span class="number">0</span>），向右为X轴，向下Y轴</span><br><span class="line">Console.SetCursorPosition(x,y);</span><br><span class="line">注意：横纵距离单位长度是不同的，视觉上<span class="number">1</span>y=<span class="number">2</span>x</span><br></pre></td></tr></table></figure>
+<p>输入</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = Console.ReadLine();<span class="comment">//输入字符串</span></span><br><span class="line">Char c = Console.ReadKey().KeyChar;<span class="comment">//输入字符</span></span><br><span class="line">	Char c = Console.ReadKey(ture).KeyChar;<span class="comment">//只检测输入的字符，不显示在控制台（依然会存到c中，只是不打印</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="其它控制台方法"><a href="#其它控制台方法" class="headerlink" title="其它控制台方法"></a>其它控制台方法</h4><p>清空控制台</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.Clear();</span><br></pre></td></tr></table></figure>
+
+<p>设置控制台窗口大小包含窗口大小，缓冲区大小(缓冲区可以比窗口大，但不能小于窗口)</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.SetWindowSize(x,y);<span class="comment">//窗口大小</span></span><br><span class="line">Console.SetBufferSize(x,)y;<span class="comment">//缓冲区大小</span></span><br></pre></td></tr></table></figure>
+
+<p>设置光标位置，和C++绘图一样默认原点为控制台左上角（0，0），向右为X轴，向下Y轴</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.SetCursorPosition(x,y);</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：横纵距离单位长度是不同的，视觉上1y&#x3D;2x</strong></p>
+<p>颜色设置</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Console.ForegroundColor = ConsoleColor.Red;<span class="comment">//字体颜色</span></span><br><span class="line">Console.BackgroundColor = ConsoleColor.White;<span class="comment">//背景颜色</span></span><br><span class="line">Console.Clear();调用Clear后背景颜色才会更新</span><br></pre></td></tr></table></figure>
+
+<p>光标显隐</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.CursorVisible = <span class="literal">false</span>;<span class="comment">//ture是开启</span></span><br></pre></td></tr></table></figure>
 
 
                 
@@ -406,10 +424,6 @@
                                     <span class="chip bg-color">C#</span>
                                 </a>
                             
-                                <a href="/tags/Unity/">
-                                    <span class="chip bg-color">Unity</span>
-                                </a>
-                            
                         </div>
                     
                 </div>
@@ -462,9 +476,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="C#中的控制台">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C#方法,一些查缺补漏">
                         
-                        <span class="card-title">C#中的控制台</span>
+                        <span class="card-title">C#方法,一些查缺补漏</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -499,10 +513,6 @@
                     
                     <a href="/tags/C/">
                         <span class="chip bg-color">C#</span>
-                    </a>
-                    
-                    <a href="/tags/Unity/">
-                        <span class="chip bg-color">Unity</span>
                     </a>
                     
                 </div>
@@ -697,7 +707,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">886</span>
+                        class="white-color">937</span>
             
             
             
