@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客指南，换句话说READ_ME, 懒惰的垃圾站">
-    <meta name="description" content="">
+    <meta name="keywords" content="UNITY学习, 懒惰的垃圾站">
+    <meta name="description" content="引擎基础unity坐标系统Unity使用的笛卡尔坐标系为左手坐标，也就是Z轴朝屏幕内向。
+Unity中有多种坐标，如下：
+
+word Space :游戏场景中最大的坐标基准。
+local Space:子物体会以父物体的坐标点为自身的坐标原点">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博客指南，换句话说READ_ME | 懒惰的垃圾站</title>
+    <title>UNITY学习 | 懒惰的垃圾站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -225,12 +229,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博客指南，换句话说READ_ME</h1>
+                    <h1 class="description center-align post-title">UNITY学习</h1>
                 </div>
             </div>
         </div>
@@ -254,12 +258,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E6%83%B3/">
-                                <span class="chip bg-color">随想</span>
-                            </a>
-                        
                             <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                                 <span class="chip bg-color">学习笔记</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">游戏开发</span>
+                            </a>
+                        
+                            <a href="/tags/UNITY/">
+                                <span class="chip bg-color">UNITY</span>
                             </a>
                         
                     </div>
@@ -274,21 +282,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-17
+                    2024-07-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-17
+                    2024-07-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    286
                 </div>
                 
 
@@ -318,7 +326,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="引擎基础"><a href="#引擎基础" class="headerlink" title="引擎基础"></a>引擎基础</h1><h4 id="unity坐标系统"><a href="#unity坐标系统" class="headerlink" title="unity坐标系统"></a>unity坐标系统</h4><p>Unity使用的笛卡尔坐标系为左手坐标，也就是Z轴朝屏幕内向。</p>
+<p>Unity中有多种坐标，如下：</p>
+<ul>
+<li>word Space :游戏场景中最大的坐标基准。</li>
+<li>local Space:子物体会以父物体的坐标点为自身的坐标原点。</li>
+<li>Screen Space：以像素为单位，左下角是（0，0），右上角为（screen.width, screen.height），Z 的位置是以相机的世界单位来衡量及物体离相机远近。</li>
+<li>viewport （视口坐标）：视口坐标是标准的和相对于相机的。相机的左下角为（0，0）点，右上角为（1，1）点，Z 的位置是以相机的世界单位来衡量的。</li>
+<li>GUI 界面的坐标系：这个坐标系与屏幕坐标系相似，不同的是该坐标系以屏幕的左上角为（0，0）点，右下角为（Screen.width，Screen.height）。</li>
+</ul>
+<h4 id="对象的定位"><a href="#对象的定位" class="headerlink" title="对象的定位"></a>对象的定位</h4><ul>
+<li>Pivot：该游戏对象（不包括子对象）的中心。</li>
+<li>Center：该游戏对象（包括子对象）的中心。 </li>
+<li>Local：相对于父对象的坐标（相对位置）</li>
+<li>Global：在 scene 中的真实坐标（实际位置）</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -344,7 +367,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://LoserBodyz.github.io/2024/04/17/bo-ke-zhi-nan-huan-ju-hua-shuo-read-me/">http://LoserBodyz.github.io/2024/04/17/bo-ke-zhi-nan-huan-ju-hua-shuo-read-me/</a>
+                    <a href="http://LoserBodyz.github.io/2024/07/15/unity-xue-xi/">http://LoserBodyz.github.io/2024/07/15/unity-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -382,12 +405,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E6%83%B3/">
-                                    <span class="chip bg-color">随想</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                                     <span class="chip bg-color">学习笔记</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">游戏开发</span>
+                                </a>
+                            
+                                <a href="/tags/UNITY/">
+                                    <span class="chip bg-color">UNITY</span>
                                 </a>
                             
                         </div>
@@ -433,9 +460,64 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/07/15/unity-xue-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="UNITY学习">
+                        
+                        <span class="card-title">UNITY学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            懒惰
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">游戏开发</span>
+                    </a>
+                    
+                    <a href="/tags/UNITY/">
+                        <span class="chip bg-color">UNITY</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2024/04/23/c-xue-xi/">
                     <div class="card-image">
@@ -453,9 +535,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -477,59 +559,6 @@
                     
                     <a href="/tags/C/">
                         <span class="chip bg-color">C#</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/04/16/you-xi-she-ji/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="游戏设计学习记录">
-                        
-                        <span class="card-title">游戏设计学习记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            懒惰
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">学习笔记</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">游戏开发</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">游戏设计</span>
                     </a>
                     
                 </div>
@@ -675,7 +704,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1k</span>
+                        class="white-color">1.3k</span>
             
             
             

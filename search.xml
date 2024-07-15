@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>UNITY学习</title>
+      <link href="/2024/07/15/unity-xue-xi/"/>
+      <url>/2024/07/15/unity-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="引擎基础"><a href="#引擎基础" class="headerlink" title="引擎基础"></a>引擎基础</h1><h4 id="unity坐标系统"><a href="#unity坐标系统" class="headerlink" title="unity坐标系统"></a>unity坐标系统</h4><p>Unity使用的笛卡尔坐标系为左手坐标，也就是Z轴朝屏幕内向。</p><p>Unity中有多种坐标，如下：</p><ul><li>word Space :游戏场景中最大的坐标基准。</li><li>local Space:子物体会以父物体的坐标点为自身的坐标原点。</li><li>Screen Space：以像素为单位，左下角是（0，0），右上角为（screen.width, screen.height），Z 的位置是以相机的世界单位来衡量及物体离相机远近。</li><li>viewport （视口坐标）：视口坐标是标准的和相对于相机的。相机的左下角为（0，0）点，右上角为（1，1）点，Z 的位置是以相机的世界单位来衡量的。</li><li>GUI 界面的坐标系：这个坐标系与屏幕坐标系相似，不同的是该坐标系以屏幕的左上角为（0，0）点，右下角为（Screen.width，Screen.height）。</li></ul><h4 id="对象的定位"><a href="#对象的定位" class="headerlink" title="对象的定位"></a>对象的定位</h4><ul><li>Pivot：该游戏对象（不包括子对象）的中心。</li><li>Center：该游戏对象（包括子对象）的中心。 </li><li>Local：相对于父对象的坐标（相对位置）</li><li>Global：在 scene 中的真实坐标（实际位置）</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> 游戏开发 </tag>
+            
+            <tag> UNITY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C#方法,一些查缺补漏</title>
       <link href="/2024/04/23/c-xue-xi/"/>
       <url>/2024/04/23/c-xue-xi/</url>
@@ -19,27 +42,6 @@
             <tag> 游戏开发 </tag>
             
             <tag> C# </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>博客指南，换句话说READ_ME</title>
-      <link href="/2024/04/17/bo-ke-zhi-nan-huan-ju-hua-shuo-read-me/"/>
-      <url>/2024/04/17/bo-ke-zhi-nan-huan-ju-hua-shuo-read-me/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 随想 </tag>
-            
-            <tag> 学习笔记 </tag>
             
         </tags>
       
