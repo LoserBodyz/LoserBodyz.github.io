@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>分层四元法</title>
+      <link href="/2024/09/04/fen-ceng-si-yuan-fa/"/>
+      <url>/2024/09/04/fen-ceng-si-yuan-fa/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏分析框架</title>
+      <link href="/2024/09/03/you-xi-fen-xi-kuang-jia/"/>
+      <url>/2024/09/03/you-xi-fen-xi-kuang-jia/</url>
+      
+        <content type="html"><![CDATA[<h1 id="游戏分析框架"><a href="#游戏分析框架" class="headerlink" title="游戏分析框架"></a>游戏分析框架</h1><h2 id="MDA框架"><a href="#MDA框架" class="headerlink" title="MDA框架"></a>MDA框架</h2><p>机制（mechanics），动态（dynamics），美学（aesthetics）</p><p>​首先我们要知道不同的框架中或许都分别提到了同一词汇，例如在四元法框架中同样提到了机制与美学。但这些框架对这同一词汇的定义不尽相同，因此我们要分别理解其中的理念。以下是在MDA中的定义：</p><ul><li>机制：游戏的数据层面上的组件和算法</li><li>动态：相应玩家输入和其他输出的实时行为</li><li>美学：玩家与游戏系统交互时，应当唤起的情绪反应</li></ul><p>​MDA认为游戏设计师应当最先确定想要玩家感受到的美学，再逆向设计机制与动态。在《游戏设计，原型与开发》中提到了桌游《蛇与梯子》作为一款低龄向桌游《蛇与梯子》的美学是希望，形势逆转以及完全不做选择的刺激，以此设计出蛇（负反馈）和梯子（正反馈）的机制。游戏玩法是投掷骰子进行移动，在地图上踩到蛇或梯子时有相应的前进和后退，是一款完全凭借运气取胜的游戏。<code>（飞行棋是不是也完全依赖运气，无策略性？）</code></p><h2 id="FDD框架"><a href="#FDD框架" class="headerlink" title="FDD框架"></a>FDD框架</h2><p>形式，戏剧和动态元素</p><ul><li>形式：包括规则，资源和界限</li><li>戏剧：剧情和叙事，设定</li><li>动态：类似MDA中的动态</li></ul><h5 id="形式元素"><a href="#形式元素" class="headerlink" title="形式元素"></a>形式元素</h5><p>​在《游戏设计梦工厂》中提出了游戏的7中形式元素：</p><ol><li>玩家交互模式</li><li>目标</li><li>规则</li><li>过程：玩家在游戏中的行动</li><li>资源：有价值的各种元素，例如金钱和血量</li><li>边界</li><li>结局</li></ol><h5 id="戏剧元素"><a href="#戏剧元素" class="headerlink" title="戏剧元素"></a>戏剧元素</h5><p>前提，角色，戏剧</p><p>关于角色：由于在游戏中主角就是玩家扮演的角色，通常我们需要决定是让主角作为玩家的代言人还是让玩家扮演一个角色。</p><p>戏剧是游戏的请假，包含了整个游戏过程的叙事内容，前提是戏剧展示的舞台（例如故事背景）。</p><h5 id="动态元素"><a href="#动态元素" class="headerlink" title="动态元素"></a>动态元素</h5><p>指在游戏过程中发生变化的东西，核心为简单规则的碰撞可以导致难以预期的结果，试玩是理解动态的唯一方法。</p><h2 id="四元法"><a href="#四元法" class="headerlink" title="四元法"></a>四元法</h2><p>在《游戏设计艺术》中提出的四元法框架：机制，美学，技术，剧情</p><p>通过了解前两种框架我们大概也能明白四元法的理念，但值得注意的是四元法中的美学指的是直观的游戏如何被五感接受，而MDA中更倾向于指游戏触动的人的情绪。</p><hr><p>此外，在《游戏设计，原型与开发》中提出了一个结合了上述三种分析框架的新框架，名为分层四元法<a href="/2024/09/04/fen-ceng-si-yuan-fa/" title="分层四元法">分层四元法</a>。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏开发 </tag>
+            
+            <tag> 游戏设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>UNITY引擎基础</title>
+      <link href="/2024/07/15/unity-yin-qing-ji-chu/"/>
+      <url>/2024/07/15/unity-yin-qing-ji-chu/</url>
+      
+        <content type="html"><![CDATA[<h4 id="unity坐标系统"><a href="#unity坐标系统" class="headerlink" title="unity坐标系统"></a>unity坐标系统</h4><p>Unity使用的笛卡尔坐标系为左手坐标，也就是Z轴朝屏幕内向。</p><p>Unity中有多种坐标，如下：</p><ul><li>word Space :游戏场景中最大的坐标基准。</li><li>local Space:子物体会以父物体的坐标点为自身的坐标原点。</li><li>Screen Space：以像素为单位，左下角是（0，0），右上角为（screen.width, screen.height），Z 的位置是以相机的世界单位来衡量及物体离相机远近。</li><li>viewport （视口坐标）：视口坐标是标准的和相对于相机的。相机的左下角为（0，0）点，右上角为（1，1）点，Z 的位置是以相机的世界单位来衡量的。</li><li>GUI 界面的坐标系：这个坐标系与屏幕坐标系相似，不同的是该坐标系以屏幕的左上角为（0，0）点，右下角为（Screen.width，Screen.height）。</li></ul><h4 id="对象的定位"><a href="#对象的定位" class="headerlink" title="对象的定位"></a>对象的定位</h4><ul><li>Pivot：该游戏对象（不包括子对象）的中心。</li><li>Center：该游戏对象（包括子对象）的中心。 </li><li>Local：相对于父对象的坐标（相对位置）</li><li>Global：在 scene 中的真实坐标（实际位置）</li></ul><h4 id="scence视图中的菜单"><a href="#scence视图中的菜单" class="headerlink" title="scence视图中的菜单"></a>scence视图中的菜单</h4><h6 id="Effects"><a href="#Effects" class="headerlink" title="Effects"></a>Effects</h6><p><img src="https://cdn.jsdelivr.net/gh/LoserBodyz/blog_image/20240715213301.png"></p><p>即渲染效果选项</p><ul><li>Skybox：在场景的背景中渲染的天空盒纹理</li><li>Fog：视图随着与摄像机之间的距离变远而逐渐消褪到单调颜色。</li><li>Flares：光源上的镜头光晕。</li><li>Always Refresh: 定义动画元素是否播放动画. 当选中，基于时间的特效会播放动画. 比如场景特效, (像地面上的草，随风摇摆).</li><li>Post Processing: 后期处理特效是否显示.</li><li>Particle Systems: 粒子系统特效是否显示.</li></ul><h6 id="Gizmos"><a href="#Gizmos" class="headerlink" title="Gizmos"></a>Gizmos</h6><p><img src="https://cdn.jsdelivr.net/gh/LoserBodyz/blog_image/20240715213132.png"></p><p>用于控制脚本图标显示</p><h4 id="Unity物理引擎系统"><a href="#Unity物理引擎系统" class="headerlink" title="Unity物理引擎系统"></a>Unity物理引擎系统</h4><ul><li>Gravity：重力</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏开发 </tag>
+            
+            <tag> UNITY </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C#方法,一些查缺补漏</title>
+      <link href="/2024/04/23/c-xue-xi/"/>
+      <url>/2024/04/23/c-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="控制台知识"><a href="#控制台知识" class="headerlink" title="控制台知识"></a>控制台知识</h2><h4 id="控制台的输入输出"><a href="#控制台的输入输出" class="headerlink" title="控制台的输入输出"></a>控制台的输入输出</h4><p>在控制台输出内容</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;&quot;</span>)；<span class="comment">//自带换行</span></span><br><span class="line">Console.Write(<span class="string">&quot;&quot;</span>);<span class="comment">//不带换行</span></span><br></pre></td></tr></table></figure><p>输入</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = Console.ReadLine();<span class="comment">//输入字符串</span></span><br><span class="line">Char c = Console.ReadKey().KeyChar;<span class="comment">//输入字符</span></span><br><span class="line">Char c = Console.ReadKey(ture).KeyChar;<span class="comment">//只检测输入的字符，不显示在控制台（依然会存到c中，只是不打印</span></span><br></pre></td></tr></table></figure><h4 id="其它控制台方法"><a href="#其它控制台方法" class="headerlink" title="其它控制台方法"></a>其它控制台方法</h4><p>清空控制台</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.Clear();</span><br></pre></td></tr></table></figure><p>设置控制台窗口大小包含窗口大小，缓冲区大小(缓冲区可以比窗口大，但不能小于窗口)</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.SetWindowSize(x,y);<span class="comment">//窗口大小</span></span><br><span class="line">Console.SetBufferSize(x,)y;<span class="comment">//缓冲区大小</span></span><br></pre></td></tr></table></figure><p>设置光标位置，和C++绘图一样默认原点为控制台左上角（0，0），向右为X轴，向下Y轴</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.SetCursorPosition(x,y);</span><br></pre></td></tr></table></figure><p><strong>注意：横纵距离单位长度是不同的，视觉上1y&#x3D;2x</strong></p><p>颜色设置</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Console.ForegroundColor = ConsoleColor.Red;<span class="comment">//字体颜色</span></span><br><span class="line">Console.BackgroundColor = ConsoleColor.White;<span class="comment">//背景颜色</span></span><br><span class="line">Console.Clear();调用Clear后背景颜色才会更新</span><br></pre></td></tr></table></figure><p>光标显隐</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.CursorVisible = <span class="literal">false</span>;<span class="comment">//ture是开启</span></span><br></pre></td></tr></table></figure><p><strong>注意：中文符号在控制台上的输出是占两个位置的</strong></p><h2 id="场景管理相关知识"><a href="#场景管理相关知识" class="headerlink" title="场景管理相关知识"></a>场景管理相关知识</h2><p>设置一个场景的ID管理（没啥用反正我用Unity但是该知道得知道の小知识）</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏开发 </tag>
+            
+            <tag> C# </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>初识游戏设计</title>
+      <link href="/2024/04/16/chu-shi-you-xi-she-ji/"/>
+      <url>/2024/04/16/chu-shi-you-xi-she-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="初识游戏设计"><a href="#初识游戏设计" class="headerlink" title="初识游戏设计"></a>初识游戏设计</h2><h2 id="24-4-17来自游戏设计与原型开发"><a href="#24-4-17来自游戏设计与原型开发" class="headerlink" title="24&#x2F;4&#x2F;17来自游戏设计与原型开发"></a>24&#x2F;4&#x2F;17来自游戏设计与原型开发</h2><h4 id="Bartok：游戏练习"><a href="#Bartok：游戏练习" class="headerlink" title="Bartok：游戏练习"></a>Bartok：游戏练习</h4><p>Bartok是一种类似Uno的桌游<em>（我爱Uno）</em></p><ol><li>准备一副去掉了大小王的扑克牌，洗混后向每个玩家发7张牌，剩下的牌面朝下作抽牌堆，将顶部的牌抽出一张牌面朝上作弃牌堆。</li><li>顺时针进行游戏，如果可以出牌必须出牌，如果不能出牌则必须抽一张牌</li><li>出牌条件如下:<ol><li>花色与弃牌堆顶部一致</li><li>数字与弃牌堆顶部一致</li></ol></li><li>出完手牌获胜</li></ol><p><em>（这不纯Uno基础版）</em></p><p><strong>重点在于</strong>试玩后分析游戏体验</p><ol><li>游戏难度对于目标受众是否合适</li><li>游戏结果靠运气or策略？随机性的占比是否恰当</li><li>当一方占上风是否导致直接锁定胜局，难以翻盘</li><li>玩家的乐趣是否只在自己的回合内，各玩家的回合操作之间有无影响<em>（大哥别卡我牌行吗）</em></li></ol><p>当我们收获了不同的游戏体验后就改针对性修改游戏了，所以游戏设计是一个<strong>增加，测试，分析，修改</strong>的过程多次重复直到设计师满意的过程。</p><p>在游戏设计与原型开发中提出了几个对Bartok规则的修改试玩的例子，例如如果一名玩家打出数字2，下一位玩家必须抽两张牌并跳过出牌。Uno玩家应该感到很熟悉，有一说一迭代设计真特么伟大。我相信大家都认同<strong>即使是简单的变动也能带来巨大的改变</strong>。</p><p>修改游戏设计过程中我们一般遵循以下几个原则：</p><ul><li>每次试玩只更改一条规则，为了分辨每个改变带来的影响</li><li>改动越大，就需要越多的试玩体验，以免被随机性蒙蔽</li><li>不要忽视小改动，再小的改动都可能彻底影响游戏</li></ul><h4 id="什么是游戏？"><a href="#什么是游戏？" class="headerlink" title="什么是游戏？"></a>什么是游戏？</h4><p>在《游戏设计，原型与开发》中有各路大神对游戏的定义，以及我们为什么要关注游戏的定义。</p><p>不过我读完觉得去他妈的，无所谓所以这段不作记录。</p><p>不过还是有些收获，首先人类喜欢设计好的冲突，人类想要成为别人，人类想要刺激。以上三点是游戏行业能吃上饭的基础，当我们设计游戏时也应该记住这些。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏开发 </tag>
+            
+            <tag> 游戏设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
