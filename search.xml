@@ -4,27 +4,6 @@
   
     
     <entry>
-      <title>在Unity中的UI基础学习</title>
-      <link href="/2024/09/06/zai-unity-zhong-de-ui-xue-xi/"/>
-      <url>/2024/09/06/zai-unity-zhong-de-ui-xue-xi/</url>
-      
-        <content type="html"><![CDATA[<h2 id="UI适配"><a href="#UI适配" class="headerlink" title="UI适配"></a>UI适配</h2><p>​最近在制作一款卡牌对战游戏【移动端】，主要是为了方便测试和谟凡一起设计的卡牌桌游顺便学习Unity游戏制作。在制作过程中UI适配成为了一个小问题，故今天记录为博客便于后续参考。实际上之前学习Unity的过程中就没太深入了解过Canvas的属性，不过之前做完都是直接在我自己的电脑上运行，没有考虑在不同分辨率设备下同一UI显示效果不同的问题。</p><p>​Canvas是UGUI的画布，只有在Canvas组件下的子物体才会参与UI渲染，<strong>在2D项目中，通常会选择相机渲染（Camera）的渲染模式（Render Mode）</strong>，这种渲染模式下</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 游戏开发 </tag>
-            
-            <tag> UNITY </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分层四元法框架学习</title>
       <link href="/2024/09/04/fen-ceng-si-yuan-fa/"/>
       <url>/2024/09/04/fen-ceng-si-yuan-fa/</url>
@@ -34,8 +13,6 @@
       
       
         <tags>
-            
-            <tag> 游戏开发 </tag>
             
             <tag> 游戏设计 </tag>
             
@@ -55,8 +32,6 @@
       
       
         <tags>
-            
-            <tag> 游戏开发 </tag>
             
             <tag> 游戏设计 </tag>
             
@@ -88,27 +63,6 @@
     
     
     <entry>
-      <title>C#方法,一些查缺补漏</title>
-      <link href="/2024/04/23/c-xue-xi/"/>
-      <url>/2024/04/23/c-xue-xi/</url>
-      
-        <content type="html"><![CDATA[<h2 id="控制台知识"><a href="#控制台知识" class="headerlink" title="控制台知识"></a>控制台知识</h2><h4 id="控制台的输入输出"><a href="#控制台的输入输出" class="headerlink" title="控制台的输入输出"></a>控制台的输入输出</h4><p>在控制台输出内容</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;&quot;</span>)；<span class="comment">//自带换行</span></span><br><span class="line">Console.Write(<span class="string">&quot;&quot;</span>);<span class="comment">//不带换行</span></span><br></pre></td></tr></table></figure><p>输入</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = Console.ReadLine();<span class="comment">//输入字符串</span></span><br><span class="line">Char c = Console.ReadKey().KeyChar;<span class="comment">//输入字符</span></span><br><span class="line">Char c = Console.ReadKey(ture).KeyChar;<span class="comment">//只检测输入的字符，不显示在控制台（依然会存到c中，只是不打印</span></span><br></pre></td></tr></table></figure><h4 id="其它控制台方法"><a href="#其它控制台方法" class="headerlink" title="其它控制台方法"></a>其它控制台方法</h4><p>清空控制台</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.Clear();</span><br></pre></td></tr></table></figure><p>设置控制台窗口大小包含窗口大小，缓冲区大小(缓冲区可以比窗口大，但不能小于窗口)</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.SetWindowSize(x,y);<span class="comment">//窗口大小</span></span><br><span class="line">Console.SetBufferSize(x,)y;<span class="comment">//缓冲区大小</span></span><br></pre></td></tr></table></figure><p>设置光标位置，和C++绘图一样默认原点为控制台左上角（0，0），向右为X轴，向下Y轴</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.SetCursorPosition(x,y);</span><br></pre></td></tr></table></figure><p><strong>注意：横纵距离单位长度是不同的，视觉上1y&#x3D;2x</strong></p><p>颜色设置</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Console.ForegroundColor = ConsoleColor.Red;<span class="comment">//字体颜色</span></span><br><span class="line">Console.BackgroundColor = ConsoleColor.White;<span class="comment">//背景颜色</span></span><br><span class="line">Console.Clear();调用Clear后背景颜色才会更新</span><br></pre></td></tr></table></figure><p>光标显隐</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.CursorVisible = <span class="literal">false</span>;<span class="comment">//ture是开启</span></span><br></pre></td></tr></table></figure><p><strong>注意：中文符号在控制台上的输出是占两个位置的</strong></p><h2 id="场景管理相关知识"><a href="#场景管理相关知识" class="headerlink" title="场景管理相关知识"></a>场景管理相关知识</h2><p>设置一个场景的ID管理（没啥用反正我用Unity但是该知道得知道の小知识）</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 游戏开发 </tag>
-            
-            <tag> C# </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>初识游戏设计</title>
       <link href="/2024/04/16/chu-shi-you-xi-she-ji/"/>
       <url>/2024/04/16/chu-shi-you-xi-she-ji/</url>
@@ -118,8 +72,6 @@
       
       
         <tags>
-            
-            <tag> 游戏开发 </tag>
             
             <tag> 游戏设计 </tag>
             
