@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初识游戏设计, 懒惰的垃圾站">
-    <meta name="description" content="初识游戏设计24&amp;#x2F;4&amp;#x2F;17	来自游戏设计与原型开发Bartok：游戏练习Bartok是一种类似Uno的桌游（我爱Uno）
-
-准备一副去掉了大小王的扑克牌，洗混后向每个玩家发7张牌，剩下的牌面朝下作抽牌堆，将顶部的牌抽出一">
+    <meta name="keywords" content="关于柏林噪声的基础, 懒惰的垃圾站">
+    <meta name="description" content="柏林噪声（Perlin Noise）柏林噪声（Perlin Noise） 是一种常用的渐变噪声算法，广泛应用于游戏开发中，尤其是在程序生成内容（如随机地图、地形生成、纹理生成等）时。它由计算机图形学家 Ken Perlin 在 1983 年">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>初识游戏设计 | 懒惰的垃圾站</title>
+    <title>关于柏林噪声的基础 | 懒惰的垃圾站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -227,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初识游戏设计</h1>
+                    <h1 class="description center-align post-title">关于柏林噪声的基础</h1>
                 </div>
             </div>
         </div>
@@ -256,8 +254,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">游戏设计</span>
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">游戏开发</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
                     </div>
@@ -272,28 +274,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-16
+                    2024-12-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-12-02
+                    2024-12-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    646
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -316,36 +318,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="初识游戏设计"><a href="#初识游戏设计" class="headerlink" title="初识游戏设计"></a>初识游戏设计</h2><h2 id="24-4-17来自游戏设计与原型开发"><a href="#24-4-17来自游戏设计与原型开发" class="headerlink" title="24&#x2F;4&#x2F;17	来自游戏设计与原型开发"></a>24&#x2F;4&#x2F;17	来自游戏设计与原型开发</h2><h4 id="Bartok：游戏练习"><a href="#Bartok：游戏练习" class="headerlink" title="Bartok：游戏练习"></a>Bartok：游戏练习</h4><p>Bartok是一种类似Uno的桌游<em>（我爱Uno）</em></p>
-<ol>
-<li>准备一副去掉了大小王的扑克牌，洗混后向每个玩家发7张牌，剩下的牌面朝下作抽牌堆，将顶部的牌抽出一张牌面朝上作弃牌堆。</li>
-<li>顺时针进行游戏，如果可以出牌必须出牌，如果不能出牌则必须抽一张牌</li>
-<li>出牌条件如下:<ol>
-<li>花色与弃牌堆顶部一致</li>
-<li>数字与弃牌堆顶部一致</li>
+                <h1 id="柏林噪声（Perlin-Noise）"><a href="#柏林噪声（Perlin-Noise）" class="headerlink" title="柏林噪声（Perlin Noise）"></a>柏林噪声（Perlin Noise）</h1><p><strong>柏林噪声（Perlin Noise）</strong> 是一种常用的渐变噪声算法，广泛应用于游戏开发中，尤其是在程序生成内容（如随机地图、地形生成、纹理生成等）时。它由计算机图形学家 Ken Perlin 在 1983 年发明，目的是为了解决传统随机噪声（如白噪声）看起来不自然的问题。</p>
+<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h2><h3 id="1-1-柏林噪声的特点"><a href="#1-1-柏林噪声的特点" class="headerlink" title="1.1 柏林噪声的特点"></a>1.1 柏林噪声的特点</h3><ol>
+<li><strong>平滑渐变</strong>：生成的噪声没有突兀的跳跃，适合模拟自然现象，如山脉、云层。</li>
+<li><strong>伪随机性</strong>：噪声看似随机，但可以通过种子值生成相同的噪声序列，确保可重复性。</li>
+<li><strong>多维噪声</strong>：支持二维（地形）、三维（体积数据）、四维（动态效果）等不同维度的噪声。</li>
 </ol>
-</li>
-<li>出完手牌获胜</li>
+<h3 id="1-2-在游戏开发中的应用"><a href="#1-2-在游戏开发中的应用" class="headerlink" title="1.2 在游戏开发中的应用"></a>1.2 在游戏开发中的应用</h3><ol>
+<li><strong>地形生成</strong>：生成自然的山脉、平原、海洋等地貌。</li>
+<li><strong>纹理生成</strong>：创建无缝纹理，如云彩、岩石、草地等。</li>
+<li><strong>程序生成内容</strong>：用于随机生成森林、迷宫、关卡等。</li>
+<li><strong>动态效果</strong>：如动态天气、云层运动等。</li>
 </ol>
-<p><em>（这不纯Uno基础版）</em></p>
-<p><strong>重点在于</strong>试玩后分析游戏体验</p>
-<ol>
-<li>游戏难度对于目标受众是否合适</li>
-<li>游戏结果靠运气or策略？随机性的占比是否恰当</li>
-<li>当一方占上风是否导致直接锁定胜局，难以翻盘</li>
-<li>玩家的乐趣是否只在自己的回合内，各玩家的回合操作之间有无影响<em>（大哥别卡我牌行吗）</em></li>
-</ol>
-<p>当我们收获了不同的游戏体验后就改针对性修改游戏了，所以游戏设计是一个<strong>增加，测试，分析，修改</strong>的过程多次重复直到设计师满意的过程。</p>
-<p>在游戏设计与原型开发中提出了几个对Bartok规则的修改试玩的例子，例如如果一名玩家打出数字2，下一位玩家必须抽两张牌并跳过出牌。Uno玩家应该感到很熟悉，有一说一迭代设计真特么伟大。我相信大家都认同<strong>即使是简单的变动也能带来巨大的改变</strong>。</p>
-<p>修改游戏设计过程中我们一般遵循以下几个原则：</p>
-<ul>
-<li>每次试玩只更改一条规则，为了分辨每个改变带来的影响</li>
-<li>改动越大，就需要越多的试玩体验，以免被随机性蒙蔽</li>
-<li>不要忽视小改动，再小的改动都可能彻底影响游戏</li>
+<h3 id="1-3-柏林噪声的优势"><a href="#1-3-柏林噪声的优势" class="headerlink" title="1.3 柏林噪声的优势"></a>1.3 柏林噪声的优势</h3><ul>
+<li><strong>自然感</strong>：比传统随机噪声更自然、平滑。</li>
+<li><strong>控制性</strong>：可以调整噪声的频率、振幅来控制细节和变化幅度。</li>
 </ul>
-<h4 id="什么是游戏？"><a href="#什么是游戏？" class="headerlink" title="什么是游戏？"></a>什么是游戏？</h4><p>在《游戏设计，原型与开发》中有各路大神对游戏的定义，以及我们为什么要关注游戏的定义。</p>
-<p>不过我读完觉得去他妈的，无所谓所以这段不作记录。</p>
-<p>不过还是有些收获，首先人类喜欢设计好的冲突，人类想要成为别人，人类想要刺激。以上三点是游戏行业能吃上饭的基础，当我们设计游戏时也应该记住这些。</p>
+<h2 id="2-基本原理"><a href="#2-基本原理" class="headerlink" title="2. 基本原理"></a>2. 基本原理</h2><p>柏林噪声的实现基于 <strong>格点插值</strong>。</p>
+<h3 id="2-1-输入坐标的划分"><a href="#2-1-输入坐标的划分" class="headerlink" title="2.1 输入坐标的划分"></a>2.1 输入坐标的划分</h3><p>给定一个二维坐标（x, y），你首先需要确定它所在的网格单元。通常情况下，柏林噪声会将空间划分为许多格点（也称为 <strong>格点阵列</strong>）。</p>
+<h3 id="2-2-格点的随机值生成"><a href="#2-2-格点的随机值生成" class="headerlink" title="2.2 格点的随机值生成"></a>2.2 格点的随机值生成</h3><p>每个格点都有一个固定的随机值（在一些实现中是随机方向的向量）。这意味着你并不是直接生成每个点的噪声，而是通过格点周围的随机值来进行插值计算。</p>
+<h3 id="2-3-平滑插值"><a href="#2-3-平滑插值" class="headerlink" title="2.3 平滑插值"></a>2.3 平滑插值</h3><p>对于输入坐标点（x, y），找到它所属的格点，并通过 <strong>插值</strong>（通常是 <strong>线性插值</strong> 或 <strong>余弦插值</strong>）计算该点的噪声值。插值确保了在格点之间的变化是平滑的。</p>
+<h3 id="2-4-梯度（Gradient）和向量插值"><a href="#2-4-梯度（Gradient）和向量插值" class="headerlink" title="2.4 梯度（Gradient）和向量插值"></a>2.4 梯度（Gradient）和向量插值</h3><p>每个格点都有一个<strong>随机梯度</strong>，即一个随机的方向向量。通过计算输入点与格点之间的相对向量与该格点的梯度之间的点积来得到噪声值。这些值再通过插值来平滑过渡。</p>
+<h3 id="2-5-多频率噪声叠加"><a href="#2-5-多频率噪声叠加" class="headerlink" title="2.5 多频率噪声叠加"></a>2.5 多频率噪声叠加</h3><p>为了增强噪声的细节和复杂性，通常会叠加多个不同频率（缩放比例）和振幅的噪声层。这种方法被称为 <strong>Octaves</strong>（八度）。每个“八度”会产生一种不同尺度的噪声。</p>
+<hr>
+<h2 id="3-噪声地图"><a href="#3-噪声地图" class="headerlink" title="3.噪声地图"></a>3.噪声地图</h2><p>Unity提供了方便的工具类可以直接使用用于生成噪声地图</p>
+<h3 id="3-1-Noise-类：生成柏林噪声地图"><a href="#3-1-Noise-类：生成柏林噪声地图" class="headerlink" title="3.1 Noise 类：生成柏林噪声地图"></a>3.1 <code>Noise</code> 类：生成柏林噪声地图</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">Noise</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">float</span>[,] GenerateNoiseMap(<span class="built_in">int</span> mapWidth, <span class="built_in">int</span> mapHeight, <span class="built_in">float</span> scale)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 创建一个二维数组，用于存储噪声地图</span></span><br><span class="line">        <span class="built_in">float</span>[,] noiseMap = <span class="keyword">new</span> <span class="built_in">float</span>[mapWidth, mapHeight];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果比例值scale小于等于0，设置为一个非常小的值，以防止除零或无效的噪声生成</span></span><br><span class="line">        <span class="keyword">if</span> (scale &lt;= <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            scale = <span class="number">0.0001f</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历地图的每个像素（从y到x）</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> y = <span class="number">0</span>; y &lt; mapHeight; y++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> x = <span class="number">0</span>; x &lt; mapWidth; x++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 计算每个像素的X和Y采样坐标</span></span><br><span class="line">                <span class="built_in">float</span> sampleX = x / scale;</span><br><span class="line">                <span class="built_in">float</span> sampleY = y / scale;</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 使用Perlin噪声函数来生成噪声值</span></span><br><span class="line">                <span class="built_in">float</span> perlinValue = Mathf.PerlinNoise(sampleX, sampleY);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 将生成的噪声值赋值给对应的噪声地图位置</span></span><br><span class="line">                noiseMap[x, y] = perlinValue;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> noiseMap;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h4><ul>
+<li><code>GenerateNoiseMap</code> 方法是生成噪声地图的核心。它会根据输入的 <code>mapWidth</code>、<code>mapHeight</code> 和 <code>scale</code> 生成一个二维的噪声图。</li>
+<li><code>Mathf.PerlinNoise(sampleX, sampleY)</code> 是 Unity 内置的函数，用于生成一个在 [0, 1] 范围内的柏林噪声值。<code>scale</code> 控制噪声的细节：较大的 <code>scale</code> 会生成平滑的噪声，而较小的 <code>scale</code> 会生成细节更多的噪声。</li>
+</ul>
+<h3 id="3-2-MapGenerator类：调用噪声生成器并显示地图"><a href="#3-2-MapGenerator类：调用噪声生成器并显示地图" class="headerlink" title="3.2 MapGenerator类：调用噪声生成器并显示地图"></a>3.2 <code>MapGenerator</code>类：调用噪声生成器并显示地图</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MapGenerator</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> mapWidth;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> mapHeight;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> mapScale;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">bool</span> autoUpdate;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GenerateMap</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 生成噪声地图</span></span><br><span class="line">        <span class="built_in">float</span>[,] noiseMap = Noise.GenerateNoiseMap(mapWidth, mapHeight, mapScale);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 找到 MapDisplay 组件并显示噪声地图</span></span><br><span class="line">        MapDisplay display = FindAnyObjectByType&lt;MapDisplay&gt;();</span><br><span class="line">        display.DrawNoiseMap(noiseMap);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="解释：-1"><a href="#解释：-1" class="headerlink" title="解释："></a>解释：</h4><ul>
+<li><code>GenerateMap</code> 方法调用 <code>Noise.GenerateNoiseMap</code> 来生成一个噪声地图，并将其传递给 <code>MapDisplay</code> 类的 <code>DrawNoiseMap</code> 方法，渲染到屏幕上。</li>
+<li><code>autoUpdate</code> 是一个标志，如果为 <code>true</code>，在每次修改参数后会自动更新地图。</li>
+</ul>
+<h3 id="3-3-MapDisplay-类：渲染噪声地图到纹理"><a href="#3-3-MapDisplay-类：渲染噪声地图到纹理" class="headerlink" title="3.3 MapDisplay 类：渲染噪声地图到纹理"></a>3.3 <code>MapDisplay</code> 类：渲染噪声地图到纹理</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">csharp复制代码<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MapDisplay</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Renderer textureRender;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">DrawNoiseMap</span>(<span class="params"><span class="built_in">float</span>[,] noiseMap</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> width = noiseMap.GetLength(<span class="number">0</span>);</span><br><span class="line">        <span class="built_in">int</span> height = noiseMap.GetLength(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        Texture2D texture = <span class="keyword">new</span> Texture2D(width, height);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 储存一个大小为 width * height 的颜色数据，每个索引对应一个像素</span></span><br><span class="line">        Color[] colourMap = <span class="keyword">new</span> Color[width * height];</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> y = <span class="number">0</span>; y &lt; height; y++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> x = <span class="number">0</span>; x &lt; width; x++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 将噪声值从 [0, 1] 映射到黑白颜色</span></span><br><span class="line">                colourMap[y * width + x] = Color.Lerp(Color.black, Color.white, noiseMap[x, y]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将颜色数据应用到纹理</span></span><br><span class="line">        texture.SetPixels(colourMap);</span><br><span class="line">        texture.Apply();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将生成的纹理设置到材质</span></span><br><span class="line">        textureRender.sharedMaterial.mainTexture = texture;</span><br><span class="line">        textureRender.transform.localScale = <span class="keyword">new</span> Vector3(width, <span class="number">1</span>, height);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="解释：-2"><a href="#解释：-2" class="headerlink" title="解释："></a>解释：</h4><ul>
+<li><code>DrawNoiseMap</code> 方法负责将生成的噪声地图渲染为纹理并应用到指定的材质上。</li>
+<li><code>Color.Lerp(Color.black, Color.white, noiseMap[x, y])</code>：使用线性插值函数 <code>Lerp</code> 将噪声值映射为黑白色调。噪声值越接近 1，颜色越白；越接近 0，颜色越黑。</li>
+<li><code>texture.SetPixels(colourMap)</code> 和 <code>texture.Apply()</code> 将颜色数据应用到纹理上，然后显示出来。</li>
+</ul>
+<hr>
+<h3 id="3-4-自定义编辑器（NewBehaviourScript-类）"><a href="#3-4-自定义编辑器（NewBehaviourScript-类）" class="headerlink" title="3.4 自定义编辑器（NewBehaviourScript 类）"></a>3.4 自定义编辑器（<code>NewBehaviourScript</code> 类）</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">csharp复制代码[CustomEditor(<span class="keyword">typeof</span>(MapGenerator))]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">NewBehaviourScript</span> : <span class="title">Editor</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInspectorGUI</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        MapGenerator mapGen = (MapGenerator)target;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (DrawDefaultInspector())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 自动更新地图</span></span><br><span class="line">            <span class="keyword">if</span> (mapGen.autoUpdate)</span><br><span class="line">            &#123;</span><br><span class="line">                mapGen.GenerateMap();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 手动生成按钮</span></span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;Generate&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            mapGen.GenerateMap();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="解释：-3"><a href="#解释：-3" class="headerlink" title="解释："></a>解释：</h4><ul>
+<li>这是一个自定义编辑器，用来控制 Unity Inspector 中的行为。</li>
+<li><code>GUILayout.Button(&quot;Generate&quot;)</code> 创建一个按钮，点击后调用 <code>mapGen.GenerateMap()</code> 生成地图。</li>
+<li>如果 <code>autoUpdate</code> 为 <code>true</code>，则在参数更改时自动更新地图。</li>
+</ul>
 
                 
             </div>
@@ -372,7 +394,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://LoserBodyz.github.io/2024/04/16/chu-shi-you-xi-she-ji/">http://LoserBodyz.github.io/2024/04/16/chu-shi-you-xi-she-ji/</a>
+                    <a href="http://LoserBodyz.github.io/2024/12/06/guan-yu-bo-lin-zao-sheng-de-ji-chu/">http://LoserBodyz.github.io/2024/12/06/guan-yu-bo-lin-zao-sheng-de-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -410,8 +432,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">游戏设计</span>
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">游戏开发</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
                         </div>
@@ -457,66 +483,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/07/15/unity-yin-qing-ji-chu/">
+                <a href="/2024/12/06/guan-yu-bo-lin-zao-sheng-de-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="UNITY引擎基础">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="关于柏林噪声的基础">
                         
-                        <span class="card-title">UNITY引擎基础</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-07-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            懒惰
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">游戏开发</span>
-                    </a>
-                    
-                    <a href="/tags/UNITY/">
-                        <span class="chip bg-color">UNITY</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/04/16/chu-shi-you-xi-she-ji/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="初识游戏设计">
-                        
-                        <span class="card-title">初识游戏设计</span>
+                        <span class="card-title">关于柏林噪声的基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -527,7 +505,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-06
                             </span>
                         <span class="publish-author">
                             
@@ -538,6 +516,55 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">游戏开发</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/09/04/fen-ceng-si-yuan-fa/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="分层四元法框架学习">
+                        
+                        <span class="card-title">分层四元法框架学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            懒惰
+                            
+                        </span>
+                    </div>
+                </div>
                 
                 <div class="card-action article-tags">
                     
